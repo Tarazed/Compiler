@@ -24,33 +24,33 @@ Note:
 
 ## lex
 
-* keyword: int | void | if | else | while | return
+- keyword: int | void | if | else | while | return
 
-* identifier: letter(letter|number)*
+- identifier: letter(letter|number)*
 
-* value: number(number)*
+- value: number(number)*
 
-* assignment: =
+- assignment: =
 
-* operator: +|-|*|/|=|==|>|>=|<|<=|!=
+- operator: +|-|*|/|=|==|>|>=|<|<=|!=
 
-* delimiter: ;
+- delimiter: ;
 
-* separator: ,
+- separator: ,
 
-* annotator:  /* */|//
+- annotator:  /* */|//
 
-* parenthese: (|)
+- parenthese: (|)
 
-* brace: {|}
+- brace: {|}
 
-* letter: a|b|...|z|A|B|...|Z
+- letter: a|b|...|z|A|B|...|Z
 
-* number: 0|1|2|...|9
+- number: 0|1|2|...|9
 
-* terminator: #
+- terminator: #
 
-  Note: Every source code should include the terminator in the end.
+  Note: Every source code should include the terminator in the end. 
 
 ##Syntax
 
