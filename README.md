@@ -22,7 +22,7 @@ Note:
 
 &ensp;&ensp;The input file "in.txt" should be put in the same directory of the source code.
 
-## lex
+## Lex
 
 - keyword: int | void | if | else | while | return
 
