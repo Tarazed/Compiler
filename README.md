@@ -52,7 +52,7 @@ Note:
 
   Note: Every source code should include the terminator in the end. 
 
-##Syntax
+## Syntax
 
 //Note: tokens in ' ' mean characters
 
