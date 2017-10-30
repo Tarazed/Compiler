@@ -16,7 +16,11 @@ Steps:
 
 Defect: 
 
-&ensp;&ensp;distribution of registers in object code is not good.
+&ensp;&ensp;Distribution of registers in object code is not good.
+
+Note:
+
+&ensp;&ensp;The input file "in.txt" should be put in the same directory of the source code.
 
 ## lex
 
@@ -52,57 +56,57 @@ Defect:
 
 //Note: tokens in ' ' mean characters
 
-Program ::= <declaration chain>
+Program ::= &lt;declaration chain&gt;
 
-<declaration chain> ::= <declaration> { <declaration> }
+&lt;declaration chain&gt; ::= &lt;declaration&gt; { &lt;declaration&gt; }
 
-<declaration> ::= int <ID> <declaration type> | void <ID> <function declaration>
+&lt;declaration&gt; ::= **int** &lt;ID&gt; &lt;declaration type&gt; | **void** &lt;ID&gt; &lt;function declaration&gt;
 
-<declaration type> ::= <variable declaration> | <function declaration>
+&lt;declaration type&gt; ::= &lt;variable declaration&gt; | &lt;function declaration&gt;
 
-<variable declaration> ::= ;
+&lt;variable declaration&gt; ::= '**;**'
 
-<function declaration> ::= '(' <formal parameter> ')' <statement block>
+&lt;function declaration&gt; ::= '**(**' &lt;formal parameter&gt; '**)**' &lt;statement block&gt;
 
-<formal parameter> ::= <parameter list> | void
+&lt;formal parameter&gt; ::= &lt;parameter list&gt; | **void**
 
-<parameter list> ::= <parameter> { ',' <parameter> }
+&lt;parameter list&gt; ::= &lt;parameter&gt; { '**,**' &lt;parameter&gt; }
 
-<parameter> ::= int <ID>
+&lt;parameter&gt; ::= **int** &lt;ID&gt;
 
-<statement block> ::='{'  <inner declaration> <statement chain> '}'
+&lt;statement block&gt; ::='**{**'  &lt;inner declaration&gt; &lt;statement chain&gt; '**}**'
 
-<inner declaration> ::= <inner variable declaration> { ';' <inner variable declaration> } | empty
+&lt;inner declaration&gt; ::= &lt;inner variable declaration&gt; { '**;**' &lt;inner variable declaration&gt; } | empty
 
-<inner variable declaration> ::= int <ID> { ',' <ID> } ';'
+&lt;inner variable declaration&gt; ::= int &lt;ID&gt; { '**,**' &lt;ID&gt; } '**;**'
 
-<statement chain> ::= <statement> { <statement> }
+&lt;statement chain&gt; ::= &lt;statement&gt; { &lt;statement&gt; }
 
-<statement> ::= <if statement> | <while statement> | <return statement> | <assignment statement>
+&lt;statement&gt; ::= &lt;if statement&gt; | &lt;while statement&gt; | &lt;return statement&gt; | &lt;assignment statement&gt;
 
-<if statement> ::= if '(' <expression> ')' <statement block> [ else <statement block>]  //Note: terms in [] indicate they are optional
+&lt;if statement&gt; ::= **if** '**(**' &lt;expression&gt; '**)**' &lt;statement block&gt; [ else &lt;statement block&gt;]  //Note: terms in [] indicate they are optional
 
-<while statement> ::= while '(' <expression> ')' <statement block>
+&lt;while statement&gt; ::= **while** '**(**' &lt;expression&gt; '**)**' &lt;statement block&gt;
 
-<return statement> ::= return [ <expression> ]
+&lt;return statement&gt; ::= **return** [ &lt;expression&gt; ]
 
-<assignment statement> ::= <ID> '=' <expression>
+&lt;assignment statement&gt; ::= &lt;ID&gt; '**=**' &lt;expression&gt;
 
-<expression> ::= <plus expression> { relop <plus expression> } //Note: relop-> <|<=|>|>=|==|!=
+&lt;expression&gt; ::= &lt;plus expression&gt; { **relop** &lt;plus expression&gt; } //Note: relop-> <|<=|>|>=|==|!=
 
-<plus expression> ::= <term> { '+' <term> | '-' <term> }
+&lt;plus expression&gt; ::= &lt;term&gt; { '**+**' &lt;term&gt; | '**-**' &lt;term&gt; }
 
-<term> ::= <factor> { '*' <factor> | '/' <factor> }
+&lt;term&gt; ::= &lt;factor&gt; { '*****' &lt;factor&gt; | '**/**' &lt;factor&gt; }
 
-<factor> ::= num | '(' <expression> ')' | <ID> <call function> //NOte: num means 0|1|2|...|9
+&lt;factor&gt; ::= num | '**(**' &lt;expression&gt; '**)**' | &lt;ID&gt; &lt;call function&gt; //NOte: num means 0|1|2|...|9
 
-<call function> ::= <call> | empty
+&lt;call function&gt; ::= &lt;call&gt; | empty
 
-<call> ::= '(' <actual parameter list> ')'
+&lt;call&gt; ::= '**(**' &lt;actual parameter list&gt; '**)**'
 
-<actual parameter lsit> ::= <actual parameter> | empty
+&lt;actual parameter lsit&gt; ::= &lt;actual parameter&gt; | empty
 
-<actual parameter> ::= <expression> { ',' <expression> }
+&lt;actual parameter&gt; ::= &lt;expression&gt; { '**,**' &lt;expression&gt; }
 
-<ID> ::= letter( letter | number)*
+&lt;ID&gt; ::= **letter**( **letter** | **number**)*
 
