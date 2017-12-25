@@ -11,7 +11,7 @@ Project created by Visual Studio 2013.
 Steps:
 
 1. lex analysis
-2. syntax analysis & intermediate code generation with no syntax tree
+2. syntax analysis & intermediate code generation without building syntax tree
 3. object code generation
 
 Defect: 
